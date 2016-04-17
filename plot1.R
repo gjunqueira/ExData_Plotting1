@@ -13,7 +13,7 @@ fullDate   <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 # Keeping the full date and discarding the two other columns
 data       <- select(cbind(fullDate,data), -c(2,3))
 
-png(filename="./plot2.png", width=480, height=480, units="px")
+png(filename="./plot1.png", width=480, height=480, units="px")
 
 hist(data$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 
